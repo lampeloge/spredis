@@ -9,3 +9,5 @@ spredis是一个PHP的简单易用redis驱动
 支持redis3，支持大部分命令、支持管道操作
 
 通过TCP建立连接、需要PHP >= 5.3
+
+支持composer

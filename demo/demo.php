@@ -2,7 +2,9 @@
 
 //error_reporting(E_ERROR|E_PARSE|E_CORE_ERROR|E_COMPILE_ERROR|E_USER_ERROR);
 
-include realpath(__DIR__.'/../spredis/Client.php');
+include realpath(__DIR__.'/../spredis/AutoLoad.php');
+\spredis\AutoLoad::register();
+
 
 echo "<pre>";
 

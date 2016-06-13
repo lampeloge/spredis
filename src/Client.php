@@ -7,7 +7,7 @@ class Client
 {
     
     
-    const SPACE_PREFIX = 'spredis';
+    const VERSION = '1.0.0-beta1';
     
     private $console   = null;
     
@@ -15,27 +15,16 @@ class Client
     
     private $pipeline  = null;
     
-    public function __construct($config = null)
+    
+    public function __construct(array $config = null)
     {
-        spl_autoload_register(array(__CLASS__, 'autoload'));
         
         Terminal::create($config);
         
         $this->console = Terminal::getInstance();
-        
     }
 
-    public function autoload($class)
-    {
-        if (0 === strpos($class,self::SPACE_PREFIX))
-        {
-            $file = substr($class,strlen(self::SPACE_PREFIX));
-			$file = str_replace('\\', '/', $file);
-            $file = __DIR__.$file.'.php';
-            
-            is_file($file) && include $file;
-        }
-    }
+    
 
     public function pipeline($callback)
     {
