@@ -1,12 +1,12 @@
 {
-    "name": "lampeloge/spredis",
+    "name": "peivnn/spredis",
     "type": "library",
     "description": "the simple php redis driver",
     "license": "Apache-2.0",
     "authors": [
         {
-            "name": "lampeloge",
-            "email": "hiqiufeng@sina.com"
+            "name": "peivnn",
+            "email": "peivnn@foxmail.com"
         }
     ],
     "require": {
